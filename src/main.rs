@@ -13,8 +13,23 @@ fn main(){
     // arithmetic
     let result = interproduct(3,7,9);
     println!("result: {result}");
+
+    // type inference
+    let b = 45;
+    let c = 2;
+
+    takes_i32(c); // le type de b devient i8
+    takes_i8(b); // le type de c reste i32
 }
 
 fn interproduct(a: i32, b:i32, c:i32) -> i32{
     return a * b + b * c + a * c;
+}
+
+fn takes_i32(a: i32){
+    println!("value of a:{a}");
+}
+
+fn takes_i8(a: i8){
+    println!("value of a:{a}");
 }
